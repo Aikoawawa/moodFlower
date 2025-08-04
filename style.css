@@ -1,0 +1,100 @@
+/* Body layout with title at top and content centered */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #fef6fb;
+  transition: background-color 1s ease;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Title at the top */
+h1 {
+  margin: 30px 0 10px;
+  text-align: center;
+  color: #444;
+  font-size: 2rem;
+}
+
+h3 {
+    margin: 30px 0 10px;
+    font-size: 15px;
+    color:gray;
+    text-align: right;
+    opacity: 50%;
+}
+
+/* Flower + buttons centered vertically and horizontally */
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Flower styling */
+.flower {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin-bottom: 30px;
+}
+
+.petal {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: #f8c8dc;
+  border-radius: 50%;
+  transition: background-color 1s ease;
+  top: 0%;
+  left: 15%;
+  transform-origin: center;
+}
+
+.petal:nth-child(1) { transform: rotate(0deg)   translate(0, -80px); }
+.petal:nth-child(2) { transform: rotate(60deg)  translate(0, -80px); }
+.petal:nth-child(3) { transform: rotate(120deg) translate(0, -80px); }
+.petal:nth-child(4) { transform: rotate(180deg) translate(0, -80px); }
+.petal:nth-child(5) { transform: rotate(240deg) translate(0, -80px); }
+.petal:nth-child(6) { transform: rotate(300deg) translate(0, -80px); }
+
+.center {
+  position: absolute;
+  top: 25%;
+  left: 40%;
+  width: 80px;
+  height: 80px;
+  background: #ffde59;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Buttons styling */
+.mood-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.mood-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 12px;
+  background-color: #ddd;
+  color: #333;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.mood-button:hover {
+  transform: scale(1.15);
+  background-color: #ccc;
+}
